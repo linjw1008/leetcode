@@ -1,3 +1,6 @@
+#ifndef _MAXIMUM_SUBARRAY_V3_H_
+#define _MAXIMUM_SUBARRAY_V3_H_
+
 //最大子序和
 //分治法
 
@@ -42,3 +45,5 @@ public:
         return max(long(leftAndRightMax), rightSumMax + leftSumMax);
     }
 };
+
+#endif

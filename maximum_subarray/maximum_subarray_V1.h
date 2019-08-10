@@ -1,9 +1,10 @@
-//最大子序和
-//一次遍历、动态规划V2
+#ifndef _MAXIMUM_SUBARRAY_V1_H_
+#define _MAXIMUM_SUBARRAY_V1_H_
 
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "maximum_subarray_V1.h"
 
 using namespace std;
 
@@ -16,10 +17,12 @@ public:
 
         for(int i = 1; i < len; i++)
         {
-            sum = max(sum + nums[i], nums[i]);
+            sum = sum > 0 ? sum + nums[i] : nums[i];
             max_sum = max(sum, max_sum);
         }
 
         return max_sum;
     }
 };
+
+#endif
