@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "maximum_subarray/maximum_subarray_V1.h"
+#include <string>
+#include "word_search/word_search_V1.h"
 
 using namespace std;
 
@@ -8,9 +9,14 @@ int main()
 {
     Solution s;
 
-    vector<int> test_data = {-2, -1};
+    vector<vector<char>> board =
+                {{'A','B','C','E'},
+                 {'S','F','C','S'},
+                 {'A','D','E','E'}};
 
-    cout << s.maxSubArray(test_data) << endl;
+    string word = "ABCCED"; 
+
+    cout << s.exist(board, word) << endl;
 
     system("pause");
 
