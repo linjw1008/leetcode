@@ -53,7 +53,6 @@ public:
                         }
                         if(w == word[index])
                         {
-                            cout << index <<"----------" << w << endl;
                             visited[x][y] = index;
 
                             index++;
