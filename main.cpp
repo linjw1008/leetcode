@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "word_search/word_search_V2.h"
+#include "minimum_path_sum\minimum_path_sum_V2.h"
 
 using namespace std;
 
@@ -9,14 +9,13 @@ int main()
 {
     Solution s;
 
-    vector<vector<char>> board =
-                {{'A','B','C','E'},
-                 {'S','F','E','S'},
-                 {'A','D','E','E'}};
+    vector<vector<int>> grid =
+                {{'1','3','1'},
+                 {'1','5','1'},
+                 {'4','2','1'}};
 
-    string word = "ABCESEEEFS"; 
 
-    cout << s.exist(board, word) << endl;
+    cout << s.minPathSum(grid) << endl;
 
     system("pause");
 
