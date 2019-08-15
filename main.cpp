@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "minimum_path_sum\minimum_path_sum_V2.h"
+#include "climbing_stairs\climbing_stairs_V3.h"
 
 using namespace std;
 
@@ -9,13 +9,9 @@ int main()
 {
     Solution s;
 
-    vector<vector<int>> grid =
-                {{'1','3','1'},
-                 {'1','5','1'},
-                 {'4','2','1'}};
 
 
-    cout << s.minPathSum(grid) << endl;
+    cout << s.climbStairs(10) << endl;
 
     system("pause");
 
