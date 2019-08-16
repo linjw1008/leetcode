@@ -3,6 +3,7 @@
 
 //课程表
 //拓扑排序、查找是否存在环
+//用邻接表实现
 
 #include <iostream>
 #include <vector>

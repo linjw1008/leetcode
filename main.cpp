@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "climbing_stairs\climbing_stairs_V3.h"
+#include "course_schedule\course_schedule_V2.h"
 
 using namespace std;
 
@@ -9,9 +9,9 @@ int main()
 {
     Solution s;
 
+    vector<vector<int>> pre = {{1, 0}};
 
-
-    cout << s.climbStairs(10) << endl;
+    cout << s.canFinish(2, pre) << endl;
 
     system("pause");
 
