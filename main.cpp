@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "course_schedule\course_schedule_V2.h"
+#include "longest_palindromic_substring\longest_palindromic_substring_V1.h"
 
 using namespace std;
 
@@ -9,9 +9,8 @@ int main()
 {
     Solution s;
 
-    vector<vector<int>> pre = {{1, 0}};
 
-    cout << s.canFinish(2, pre) << endl;
+    cout << s.longestPalindrome("dabbbbac") << endl;
 
     system("pause");
 
