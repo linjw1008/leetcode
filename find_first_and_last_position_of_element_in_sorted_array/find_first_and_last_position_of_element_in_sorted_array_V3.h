@@ -13,12 +13,13 @@ using namespace std;
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
-        vector<int> ret(2, -1);
         int len = nums.size();
-        if(len == 0 || (len == 1 && nums[0] != target)) return ret;
+        if(len == 0) return {-1, -1};
         
         int left = 0, right = len;
         int mid;
+        int leftIndex = -1;
+        int rightIndex = -1;
 
         //找出左边界
         while(left < right)
@@ -31,7 +32,7 @@ public:
             else if(nums[mid] == target)
                 right = mid;
         }
-        if(right >= 0 && right < len) ret[0] = nums[right] == target  ? right : -1;
+        leftIndex = right;
         //找出右边界
         left = 0;
         right = len;
@@ -45,9 +46,11 @@ public:
             else if(nums[mid] == target)
                 left = mid + 1;
         }
-        if(left <= len && left > 0) ret[1] =  nums[left - 1] == target ? left - 1 : -1;
+        rightIndex = left - 1;
 
-        return ret;
+        if(rightIndex < leftIndex) return {-1, -1};
+        
+        return {leftIndex, rightIndex};
     }
 };
 
