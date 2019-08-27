@@ -15,6 +15,7 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "ostream": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "unordered_map": "cpp"
     }
 }
