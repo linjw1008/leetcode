@@ -2,7 +2,7 @@
 #define _SUBSETS_V3_H_
 
 //子集
-//动态规划
+//分治法
 
 #include <iostream>
 #include <vector>
