@@ -6,14 +6,14 @@
 //调整最后一个叶子节点
 void up_small_heap(vector<int>& arr)
 {
-    int childInddex = arr.size() - 1;
-    int parentIndex = (childInddex - 1) / 2;
+    int childIndex = arr.size() - 1;
+    int parentIndex = (childIndex - 1) / 2;
 
-    while (parentIndex >= 0 && arr[childInddex] < arr[parentIndex])
+    while (parentIndex >= 0 && arr[childIndex] < arr[parentIndex])
     {
-        swap(arr[childInddex], arr[parentIndex]);
-        childInddex = parentIndex;
-        parentIndex = (childInddex - 1) / 2;
+        swap(arr[childIndex], arr[parentIndex]);
+        childIndex = parentIndex;
+        parentIndex = (childIndex - 1) / 2;
     }
 }
 
@@ -41,13 +41,15 @@ void down_small_heap(vector<int>& arr, int parentIndex, int length)
 void build_small_heap(vector<int>& arr)
 {
     int length = arr.size();
-    int parentIndex = (length - 1) / 2;
-    
+//    int parentIndex = (length - 1) / 2;
+    int parentIndex = (length - 2) / 2;  //应该-2？？？
+      
     while (parentIndex >= 0)
     {
         down_small_heap(arr, parentIndex, length);
         parentIndex--;
     }
+
 }
 
 //获取第一个元素
@@ -139,7 +141,7 @@ void push_large_heap(vector<int>& arr, int val)
 
 int main()
 {
-    vector<int> array = {1, 3, 2, 6, 5, 7, 8, 9, 10, 0};
+    vector<int> array = {1, 3, 2, 6, 5, 7, 8, 9, 10, 0, 11};
     build_small_heap(array);
     int len = array.size();
     for (int i = 0; i < len; ++i)

@@ -35,29 +35,3 @@ public:
         return ret;
     }
 };
-
-//解法二
-//常数空间复杂度
-class Solution {
-public:
-    vector<int> productExceptSelf(vector<int>& nums) {
-        vector<int> ans(nums.size());
-        ans[0] = nums[0];
-        int right = nums[nums.size() - 1];
-        
-        for (int i = 1; i < nums.size(); ++i)
-        {
-            ans[i] = ans[i - 1] * nums[i];
-        }
-        
-        ans[nums.size() - 1] = ans[nums.size() - 2];
-        for (int i = nums.size() - 2; i >= 1; --i)
-        {
-            ans[i] = ans[i - 1] * right;
-            right = right * nums[i];
-        }
-        ans[0] = right;
-        
-        return ans;
-    }
-};
